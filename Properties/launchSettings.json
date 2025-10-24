@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AnyCPUAppHostConsole": {
+      "commandName": "Project",
+      "commandLineArgs": ""
+    }
+  }
+}

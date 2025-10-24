@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net48</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>13</LangVersion>
+        <DefineConstants>$(DefineConstants);wpkg</DefineConstants>
+        <!--<AssemblyName>AnyCPUAppHostConsole</AssemblyName>-->
+        <AssemblyName>HostPanelPro.Installer</AssemblyName>
+        <DebugType>embedded</DebugType>
+        <ApplicationManifest>HostPanelPro.Installer.manifest</ApplicationManifest>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="HostPanelPro.Installer.deps.json" />
+      <None Remove="HostPanelPro.Installer.dll" />
+      <None Remove="HostPanelPro.Installer.runtimeconfig.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="HostPanelPro.Installer.deps.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="HostPanelPro.Installer.dll">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="HostPanelPro.Installer.runtimeconfig.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="System.Net.Http" />
+      <Reference Include="System.Windows.Forms" />
+    </ItemGroup>
+
+</Project>
